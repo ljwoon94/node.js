@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // 객체 리터럴
+    const newObject = {
+        sayJS(){
+            console.log('JS');
+        },
+        sayNode,
+        [es + 6]: 'Fantastic',
+    };
+    newObject.sayNode(); // Node
+    // sayNode()는 속성명과 변수명이 동일하면 한번만 써도 되게 되었다.
+    // 예전 es5는 {name:name, age:age}, 현재 ES2015은 {name, age}
+    newObject.sayJS(); // JS
+    console.log(newObject.ES6); // Fantastic
+
+
+</script>
+<body>
+    
+</body>
+</html>

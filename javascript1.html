@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // const, let, var 함수선언
+    if(true){
+        var x=3;
+    }
+    console.log(x); // 3
+
+    // if(true){
+    //     const y = 3; 
+    // }
+    // console.log(y); // error y is not defined
+
+    // x는 정상 출력되지만 y는 에러가 발생한다ㅣ
+    // var은 함수 스코프를 가지므로 if문의 블록과 상관없이 접근가능
+    // const와 let은 블록스코프를 가지므로 블록 밖에서는 변수에 접근 할 수 없다.
+    // 블록의 범위는 if, while, for, function등이 에서 볼수 있는 (),{} 사이다.
+    // const 와 let의 차이
+    // const 한번 값을 할당하면 다른 값으로 바꿀 수 없다. 상수
+    // let은 가능. 변수
+    // 변수를 선언 시에는 기본적으로 const를 사용한다, 다른 값을 할당해야할 시 let 사용
+
+    //const a = 0;
+    //a = 1;  error
+
+    let b = 0;
+    b = 1; // 1
+
+    // const c;  error
+</script>
+<body>
+    
+</body>
+</html>
