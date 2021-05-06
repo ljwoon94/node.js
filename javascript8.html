@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // async/await
+    // 프로미스가 콜백의 문제를 어느정도 해결했다지만, 코드가 너무 김
+    // 그래서 async/await 사용
+
+    async function findAndSaveUser(Users){
+        try {
+            let user = await Users.findOne({});
+            user.name = 'zero';
+            user = await user.save();
+            user = await Users.findOne({gender:'m'});
+            //생략
+        } catch (error){
+            console.error(error);
+        }
+    }
+    // 이제 해당 프로미스가 resolve될 때까지 기다린 다음 로직으로 넘어감
+
+    //화살표 함수로도 구현 가능
+    const findAndSaveUser = async (Users) => {
+        try {
+            let user = await Users.findOne({});
+            user.name = 'zero';
+            user = await user.save();
+            user = await Users.findOne({gender:'m'});
+            //생략
+        } catch (error){
+            console.error(error);
+        }
+    };
+
+    // for문과 async/await 를 같이 써서 프로미스를 순차적으로 실행가능
+    const promise1 = Promise.resolve('성공1');
+    const promise2 = Promise.resolve('성공2');
+    (async()=>{
+        for await (promise of [promise1, promise2]){
+            console.log(promise);
+        }
+    })();
+
+    // for await of 문을 사용해서 프로미스 배열을 순회하는 모습이다.
+    // async 함수의 반환값은 항상 Promise로 감싸집니다.
+    // 따라서 실행 후 then을 붙이거나 또 다른 async 함수 안에서4
+    // await을 붙여서 처리할 수 있다.
+    async function findAndSaveUser(Users){
+        //생략
+    }
+    findAndSaveUser().then(()=>{/*생략*/});
+    //또는
+    async function other(){
+        const result = await findAndSaveUser();
+    }
+
+</script>
+<body>
+    
+</body>
+</html>

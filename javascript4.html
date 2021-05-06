@@ -28,6 +28,17 @@
     // 화살표 함수에서 function 선언 대신 => 기호로 함수를 선언한다.
     // 변수에 대입하면 나중에 재사용 할 수 있다.
     // 화살표 함수 내부에 return문밖에 없는 경우에는 return문 줄이기 가능
+
+    const relationship = {
+        name: 'zero',
+        friends: ['nero','hero', 'xero'],
+        logFriends(){
+            this.friends.forEach(friend =>{
+                console.log(this.name, friend);
+            });
+        },
+    };
+    relationship.logFriends();
 </script>
 <body>
     
