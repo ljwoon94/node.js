@@ -1,0 +1,18 @@
+{
+  "name": "learn-express",
+  "version": "1.0.0",
+  "description": "익스프레스를 공부하자",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "leejeongwoon",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
+}
